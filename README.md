@@ -25,7 +25,7 @@ void ClearScreen()
 }
 
 void Setup() 
-{   // Initialise variables
+{   
     gameOver = false;
     dir = STOP;
     srand(time(0));
@@ -201,11 +201,11 @@ void Logic()
 int main()
 {
     Setup();
-    while (!gameOver) // Game mainloop 
+    while (!gameOver)  
     {
         Draw();
         if (dir == UP || DOWN)
-            Sleep(25); // Helps to equate vertical snake movement speed and horizontal speed
+            Sleep(25); 
         Sleep(40);
         Input();
         Logic();
